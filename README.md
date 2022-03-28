@@ -13,6 +13,8 @@ you can add most of the maps here. but i personally like for [ArcGIS Online Maps
 
 you just need to copy one of the URL and paste it to ***urlTemplate*** of lib\maps\map_and_navigation.dart
 
+<img src="https://raw.githubusercontent.com/CodeFoxLk/flutter_car_dashboard/main/images/map%20providers%20url.png" alt="alt text" width="600"/>
+
 if you use Carto base maps. remember to remove the **'{s}'** of the URL
 
 
