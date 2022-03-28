@@ -6,8 +6,11 @@ http://www.strasis.com/documentation/limelight-xe/reference/tile-map-servers
 you can add most of maps here. but i personaly like for [ArcGIS Online Maps] and [Carto Base Maps]
 
 you just need to copy one of URL and paste it to ***urlTemplate*** of lib\maps\map_and_navigation.dart
+<img src="https://raw.githubusercontent.com/CodeFoxLk/flutter_car_dashboard/main/images/map%20providers%20url.png" alt="alt text" width="600"/>
 
 if you use Carto base maps. remember to remove **'{s}'** of the URL
+
+
 
 ##### Map box
 
@@ -38,4 +41,5 @@ if you use Carto base maps. remember to remove **'{s}'** of the URL
 -  <img src="https://raw.githubusercontent.com/CodeFoxLk/flutter_car_dashboard/main/images/thirdparty.png" alt="alt text" width="600"/>
   
 -  finally copy integration url and past to urlTemplate of lib\maps\map_and_navigation.dart 
+   <img src="https://raw.githubusercontent.com/CodeFoxLk/flutter_car_dashboard/main/images/map%20providers%20url.png" alt="alt text" width="600"/>
 
