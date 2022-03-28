@@ -14,16 +14,18 @@ if you use Carto base maps. remember to remove **'{s}'** of the URL
 -  Sign in to https://studio.mapbox.com/ and open mapbox studio
 
 -  click on **create a map in studuio** button
+
    <img src="https://raw.githubusercontent.com/CodeFoxLk/flutter_car_dashboard/main/images/1.png" alt="alt text" width="600"/>
 
 -  click on **new style** button
+ 
    <img src="https://raw.githubusercontent.com/CodeFoxLk/flutter_car_dashboard/main/images/create%20new%20mbs.png" alt="alt text" width="600"/>
 
 -  choose a template **and click on **cutomize** button
    <img src="https://raw.githubusercontent.com/CodeFoxLk/flutter_car_dashboard/main/images/create%20new%20mbs%20customize%20btn.png" alt="alt text" width="600"/>
 
 -  cutomize and change colors as you wish and **publish** the map
-   <img src="https://raw.githubusercontent.com/CodeFoxLk/flutter_car_dashboard/main/images/edit.png" alt="alt text" width="600"/>
+   <img src="https://raw.githubusercontent.com/CodeFoxLk/flutter_car_dashboard/main/images/edit.png" alt="alt text" width="200"/>
 
 -  click on **share** button 
    <img src="https://raw.githubusercontent.com/CodeFoxLk/flutter_car_dashboard/main/images/sharebtn.png" alt="alt text" width="600"/>
