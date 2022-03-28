@@ -12,6 +12,7 @@ if you use Carto base maps. remember to remove **'{s}'** of the URL
 ##### Map box
 
 -  Sign in to https://studio.mapbox.com/ and open mapbox studio
+-  <img src="https://raw.githubusercontent.com/CodeFoxLk/flutter_car_dashboard/main/images/1.png" alt="alt text" width="200"/>
 -  click on **create a map in studuio** button
 -  click on **new style** button
 -  choose a template **and click on **cutomize** button
