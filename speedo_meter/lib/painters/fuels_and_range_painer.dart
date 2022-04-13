@@ -11,27 +11,19 @@ extension FuelAndRange on SpeedometerPainter {
   void fuelAndRangeRange({int remainingPresentage = 100}) {
     assert(remainingPresentage <= 100);
  
-    final gapBetweenWithIndicators = degreeToRadians(10);
-    final startPosition = degreeFromPotionToRadians(indicatorEndPosition) +
-        gapBetweenWithIndicators -
-        degreeToRadians(270);
-    final sweepAngle = degreeFromPotionToRadians(
-            1 - (indicatorEndPosition - indicatorStartPosition)) -
-        gapBetweenWithIndicators * 2;
+    final double gapBetweenWithIndicators = degreeToRadians(10);
+    final double startPosition = degreeFromPotionToRadians(indicatorEndPosition) + gapBetweenWithIndicators - degreeToRadians(270);
+    final double sweepAngle = degreeFromPotionToRadians(1 - (indicatorEndPosition - indicatorStartPosition)) - gapBetweenWithIndicators * 2;
 
-    final batteryIndicarotHolderLengthInRadians = sweepAngle;
-    final gapsLengthForIndicators =
-        batteryIndicarotHolderLengthInRadians * 0.25;
+    final double batteryIndicarotHolderLengthInRadians = sweepAngle;
+    final double gapsLengthForIndicators = batteryIndicarotHolderLengthInRadians * 0.25;
 
-    const indicatorsCount = 20;
-    final singleIndicatorLengthInRadians =
-        (batteryIndicarotHolderLengthInRadians - gapsLengthForIndicators) /
-            indicatorsCount;
-    final singleGapLengthInRadians = gapsLengthForIndicators /
-        (indicatorsCount - 1); // if indicators count 10 -> gaps -> 9
+    const int indicatorsCount = 20;
+    final double singleIndicatorLengthInRadians = (batteryIndicarotHolderLengthInRadians - gapsLengthForIndicators) / indicatorsCount;
+    final double singleGapLengthInRadians = gapsLengthForIndicators / (indicatorsCount - 1); // if indicators count 10 -> gaps -> 9
 
 
-    final _batteryDrainedPresentage = 1 - remainingPresentage/100;
+    final double _batteryDrainedPresentage = 1 - remainingPresentage/100;
     late Color? _activeColor =  getBatteryIndicatorColor(batteryLevel: remainingPresentage);
 
     Paint paintObject = Paint();
