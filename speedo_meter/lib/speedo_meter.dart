@@ -8,12 +8,10 @@ import 'package:speedo_meter/painters/speedometer_painter.dart';
 import 'providers/geo_location_provider.dart';
 
 const topSpeed = 40;
-const indicatorStartPosition =
-    0.15; // 360 * 0.15  // 0.00 position is bottom center of canvas. soindicators, markers draw statrting from there 6 of clock
+const indicatorStartPosition = 0.15; // 360 * 0.15  // 0.00 position is bottom center of canvas. soindicators, markers draw statrting from there 6 of clock
 const indicatorEndPosition = 0.85; // 360 * 0.85
 const exponent = 3;
-const bigMarkerFinder =
-    5; // Markers splitting count   // indicatorEndPosition - indicatorStartPosition /  bigMarkerFinder => shoud be integer
+const bigMarkerFinder = 5; // Markers splitting count   // indicatorEndPosition - indicatorStartPosition /  bigMarkerFinder => shoud be integer
 const innerComponentsRadiusPostion = 0.25;
 const Color componentsPrimaryColor = Colors.white;
 const Color backgroundColor = Color.fromARGB(255, 11, 11, 12);

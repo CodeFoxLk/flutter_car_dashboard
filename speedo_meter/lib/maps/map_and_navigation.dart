@@ -27,7 +27,7 @@ class _MapAndNavigationsState extends State<MapAndNavigations> {
 
   @override
   Widget build(BuildContext context) {
-    return IgnorePointer(
+     return IgnorePointer(
       child: ClipPath(
         clipper: DashBoardMapClipper(),
         child: Stack(
@@ -37,7 +37,7 @@ class _MapAndNavigationsState extends State<MapAndNavigations> {
               options: MapOptions(
                   // center:_geoLocationProvider.mapController.center ?? LatLng(45.5231, -122.6765),
                   rotation: 0,
-                  zoom: 18.0,
+                  zoom: 5.0,
                   plugins: []),
               layers: [
                 TileLayerOptions(

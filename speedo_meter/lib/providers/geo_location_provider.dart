@@ -38,26 +38,27 @@ class GeoLocationProvider extends ChangeNotifier {
     final curruntPosition = await Geolocator.getCurrentPosition();
     updateMyLocation(curruntPosition);
 
-    const LocationSettings locationSettings = LocationSettings(
-      accuracy: LocationAccuracy.high,
-      distanceFilter: 1,
+    LocationSettings locationSettings = const LocationSettings(
+      accuracy: LocationAccuracy.bestForNavigation,
+      distanceFilter: 0,
     );
 
-    resetSpeed();
+    //resetSpeed();
 
     Geolocator.getPositionStream(locationSettings: locationSettings)
         .listen((Position? position) {
+          print(position?.speed);
       updateMyLocation(position);
     });
   }
 
   // ****** some times the PositionStream won't be working when the movement stop, so has to manually zero the speed every 2 seconds
-  void resetSpeed() {
-    Timer.periodic(const Duration(milliseconds: 2000), (timer) async {
-      speed = '0.00';
-      notifyListeners();
-    });
-  }
+  // void resetSpeed() {
+  //   Timer.periodic(const Duration(milliseconds: 2000), (timer) async {
+  //     speed = '0.00';
+  //     notifyListeners();
+  //   });
+  // }
 
   
   void myLocationChecker() async {
@@ -69,11 +70,12 @@ class GeoLocationProvider extends ChangeNotifier {
   }
 
   void updateMyLocation(Position? curruntPosition) {
+    
     if (curruntPosition == null) return;
     mapController.rotate(curruntPosition.heading);
     mapController.move(
-        LatLng(curruntPosition.latitude, curruntPosition.longitude), 15);
-    speed = (curruntPosition.speed * 3600 / 1000).abs().toStringAsFixed(2); // speed in KM/h
+        LatLng(curruntPosition.latitude, curruntPosition.longitude), 17);
+    speed = (curruntPosition.speed * (3600 / 1000)).abs().toStringAsFixed(2); // speed in KM/h
     notifyListeners();
   }
 }
