@@ -1,6 +1,5 @@
  import 'package:flutter/material.dart';
-
-import '../speedo_meter.dart';
+import 'package:speedo_meter/widgets/speedo_meter.dart';
 
 class DashBoardPainter extends CustomPainter {
 

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
-import 'package:speedo_meter/speede_meter_home.dart';
 
 import 'providers/geo_location_provider.dart';
+import 'speede_meter_home.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

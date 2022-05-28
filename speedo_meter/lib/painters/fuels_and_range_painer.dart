@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:speedo_meter/speedo_meter.dart';
 import 'package:speedo_meter/painters/speedometer_painter.dart';
+import 'package:speedo_meter/widgets/speedo_meter.dart';
 
 const fuelandRangIndicatorActiveColor = Color.fromARGB(255, 33, 205, 243);
 const fuelandRangIndicatorDrainedColor2 = Color.fromARGB(255, 173, 255, 9);

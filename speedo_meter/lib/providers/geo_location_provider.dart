@@ -4,10 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:latlong2/latlong.dart';
+import 'package:speedo_meter/widgets/speedo_meter.dart';
 
 class GeoLocationProvider extends ChangeNotifier {
   final MapController mapController = MapController();
-  String speed = '0.00';
+  double speed = 0.00;
+  List<double> speedSequence = [0,0];
+
   Timer? _myLocationChecker;
 
   void initGeoLocation() async {
@@ -47,7 +50,7 @@ class GeoLocationProvider extends ChangeNotifier {
 
     Geolocator.getPositionStream(locationSettings: locationSettings)
         .listen((Position? position) {
-          print(position?.speed);
+         
       updateMyLocation(position);
     });
   }
@@ -73,9 +76,15 @@ class GeoLocationProvider extends ChangeNotifier {
     
     if (curruntPosition == null) return;
     mapController.rotate(curruntPosition.heading);
-    mapController.move(
-        LatLng(curruntPosition.latitude, curruntPosition.longitude), 17);
-    speed = (curruntPosition.speed * (3600 / 1000)).abs().toStringAsFixed(2); // speed in KM/h
+    mapController.move(LatLng(curruntPosition.latitude, curruntPosition.longitude), 17);
+    
+    
+    speed = (curruntPosition.speed * (3600 / 1000)).abs(); // speed in KM/h
+    if(curruntPosition.speed > topSpeed){
+        speed = topSpeed.toDouble();
+    }
+    speedSequence.add(speed);  
+    speedSequence.removeAt(0);
     notifyListeners();
   }
 }

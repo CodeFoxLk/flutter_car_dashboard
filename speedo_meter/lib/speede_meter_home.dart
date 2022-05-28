@@ -5,11 +5,11 @@ import 'package:battery_info/model/android_battery_info.dart';
 import 'package:battery_info/model/iso_battery_info.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:speedo_meter/speedo_meter.dart';
+import 'package:speedo_meter/maps/map_and_navigation.dart';
+import 'package:speedo_meter/painters/dash_board_painter.dart';
+import 'package:speedo_meter/widgets/speedo_meter.dart';
 
-import 'car_frame.dart';
-import 'maps/map_and_navigation.dart';
-import 'painters/dash_board_painter.dart';
+import 'widgets/car_frame.dart';
 
 class SpeedometerHome extends StatefulWidget {
   const SpeedometerHome({Key? key}) : super(key: key);

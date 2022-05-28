@@ -3,8 +3,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:speedo_meter/painters/fuels_and_range_painer.dart';
-import 'package:speedo_meter/speedo_meter.dart';
 import 'package:speedo_meter/painters/speedometer_gradients.dart';
+import 'package:speedo_meter/widgets/speedo_meter.dart';
 
 class SpeedometerPainter extends CustomPainter {
   

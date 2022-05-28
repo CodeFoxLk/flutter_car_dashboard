@@ -1,8 +1,7 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
-import 'package:speedo_meter/speedo_meter.dart';
 import 'package:speedo_meter/painters/speedometer_painter.dart';
+import 'package:speedo_meter/widgets/speedo_meter.dart';
 
 extension SpeedometerGradiants on SpeedometerPainter{
   
